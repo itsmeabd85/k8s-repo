@@ -1,0 +1,23 @@
+# for suggenstuon for the command featching in the terminal  fix these command in this 
+
+ ### kubectl Autocompletion Setup (Ubuntu)
+
+To enable command suggestion/autocompletion for `kubectl` in the terminal:
+
+#### ✅ One-liner Setup Command:
+
+sudo apt update && sudo apt install bash-completion -y && echo 'source /usr/share/bash-completion/bash_completion' >> ~/.bashrc && echo 'source <(kubectl completion bash)' >> ~/.bashrc && source ~/.bashrc
+```
+
+#### ✅ Test Autocompletion:
+Type the following and press `<TAB><TAB>`:
+
+kubectl des
+```
+You should see:
+
+kubectl describe
+```
+
+This confirms that shell autocompletion for `kubectl` is now working.
+
