@@ -21,3 +21,9 @@ echo "Verifying AWS CLI installation..."
 aws --version
 
 echo "To configure AWS CLI, run: aws configure"
+
+
+# chmod +x install-aws-cli.sh 
+# git add install-aws-cli.sh
+# git commit -m "Add AWS CLI v2 install script for Ubuntu"
+# git push
