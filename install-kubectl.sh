@@ -2,8 +2,17 @@
 
 # KUBECTL Install Script for Ubuntu
 
-echo "Downloading latest kubectl binary..."
-curl -LO "https://dl.k8s.io/release/$(curl -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+echo "Downloading latest kubectl version info..."
+KUBECTL_VERSION=$(curl -sL https://dl.k8s.io/release/stable.txt)
+
+if [[ -z "$KUBECTL_VERSION" ]]; then
+  echo "Failed to fetch the latest kubectl version. Check your internet connection."
+  exit 1
+fi
+
+echo "Latest version: $KUBECTL_VERSION"
+echo "Downloading kubectl binary..."
+curl -LO "https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl"
 
 echo "Making kubectl executable..."
 chmod +x kubectl
