@@ -21,3 +21,6 @@ kubectl describe
 
 This confirms that shell autocompletion for `kubectl` is now working.
 
+# sudo apt update && sudo apt install bash-completion -y && echo 'source /usr/share/bash-completion/bash_completion' >> ~/.bashrc && echo 'source <(kubectl completion bash)' >> ~/.bashrc && source ~/.bashrc
+
+# try this one as well if not working 
